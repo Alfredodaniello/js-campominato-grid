@@ -11,6 +11,7 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
 
+alert("Clicca sul tasto play per giocare!");
 //Selezione il bottone e lo metto in ascolto
 const btn = document.querySelector("#btn");
 btn.addEventListener("click", function(){
@@ -21,7 +22,7 @@ btn.addEventListener("click", function(){
     mainGrid.classList.remove("d-none");
     mainGrid.classList.add("d-flex");
 
-//Utilizzo un ciclo per crearmi 100 quadrati ed aggiungergi le rispettive classi
+//Utilizzo un ciclo per crearmi 100 quadrati ed aggiungergli le rispettive classi
 for(let i = 1; i <=100 ; i++){
     const createdSquare = document.createElement("div");
     createdSquare.classList.add("square","square-base");
