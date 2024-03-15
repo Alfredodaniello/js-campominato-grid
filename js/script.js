@@ -24,15 +24,30 @@ btn.addEventListener("click", function(){
 
 //Utilizzo un ciclo per crearmi 100 quadrati ed aggiungergli le rispettive classi
 for(let i = 1; i <=100 ; i++){
+    const createdSquare = square(i);
+    mainGrid.append(createdSquare)
+    }
+
+/*********************
+ Functions
+ ********************/
+
+ //Creo una funzione per generare un quadrato
+ //number è il numero del quadrato
+ //return: ritorna un quadrato che appendo nel DOM
+
+ function square(number) {
     const createdSquare = document.createElement("div");
+    createdSquare.innerHTML = `<span>${number}</span>`;
     createdSquare.classList.add("square","square-base");
-    createdSquare.innerHTML = `<span>${i}</span>`;
 
     //Per ogni click sulla cella aggiungo la classe ai miei quadrati e stampo in console il numero della cella cliccata
     createdSquare.addEventListener("click", function(){
         createdSquare.classList.toggle("back-blue");
-        console.log("la cella cliccata è la numero " + i)
+        console.log("la cella cliccata è la numero " + number)
     })
-    mainGrid.append(createdSquare)
-    }
+    return createdSquare 
+ }
+
 })
+
