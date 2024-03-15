@@ -37,12 +37,13 @@ button {
 
 .gridcontainer {
     margin: 25px auto;
-    max-width: 600px;
+    width: 600px;
     height: 600px;
-    background-color: #007BFF;
+    background-color: rgb(255, 81, 0);
 }
 
 .square {
+    cursor: pointer;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -61,4 +62,16 @@ button {
 .square-bonusdiff3{
     width: calc(100% / 7);
     height: calc(100% / 7);
+}
+
+.back-blue {
+    background-color: blue;
+}
+
+/*******************************
+            FOOTER
+*******************************/
+footer {
+    height: 40px;
+    background-color: #ffffff;
 }
